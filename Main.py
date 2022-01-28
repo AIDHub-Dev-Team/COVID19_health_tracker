@@ -36,8 +36,8 @@ driver = Edge(current_path, options=options)
 
 try:
     driver.get(site_url)
-
-    time.sleep(2)
+    time.sleep(10)
+    driver.implicitly_wait(2)
 
     # Input the gpn number
     gpn = driver.find_element_by_xpath(
